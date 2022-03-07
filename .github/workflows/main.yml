@@ -18,7 +18,7 @@ jobs:
       ACR_SERVER: quyennvsecacr.azurecr.io
     steps:
       - name: Checkout sample Dockerfile
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.0
       - name: Build a sample Docker image with Firefox
         run: |
           docker build -t ${{ env.ACR_SERVER }}/${{ env.ACR_REPO_NAME }}:${{ github.sha }} --file **/vul-docker.dockerfile
